@@ -7,7 +7,7 @@ function requireAll(requireContext) {
   return requireContext.keys().map(requireContext);
 }
 
-var controllers = requireAll(require.context('.', true, /^(?!.*spec).*\/(?!.*index).*\.js$/));
+let controllers = requireAll(require.context('.', true, /^(?!.*spec).*\/(?!.*index).*\.js$/));
 
 Object.keys(controllers).forEach(key => {
     
