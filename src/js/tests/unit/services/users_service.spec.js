@@ -1,4 +1,4 @@
-describe('Unit: ExampleService', function () {
+describe('Unit: UsersService', function () {
 
     let http, service;
 
