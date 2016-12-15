@@ -50,6 +50,7 @@
   },
   "scripts": {
     "start": "gulp watch",
-    "prod": "gulp --production"
+    "prod": "gulp --production",
+    "test": "./node_modules/karma/bin/karma start"
   }
 }
