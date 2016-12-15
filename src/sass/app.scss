@@ -1,0 +1,9 @@
+@charset "utf-8";          
+// Resets browser defaults 
+//@import "_meyer.sass";
+@import "_normalize.sass"; 
+
+// import boostrap sass
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap";
+//Stuff that effects every page
+@import "_main.sass";
