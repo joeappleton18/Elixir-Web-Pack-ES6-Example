@@ -1,8 +1,8 @@
 class HomeController {
 
+
      constructor($http) {
-        this.title = 'elixir  + angular + web pack + ECMAScript 6 support';
-        this.number = 123432324344;
+        this.title = 'Elixir + Angular + Web pack + ECMAScript 6';
         this.$http = $http;
      }
 

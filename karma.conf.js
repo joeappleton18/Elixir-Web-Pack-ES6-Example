@@ -35,7 +35,7 @@ module.exports = function(config) {
          * This should be your JS Folder where all source javascript
          * files are located.
          */
-        basePath: './src/js/',
+        //basePath: 'src/js',
 
         /**
          * list of files / patterns to load in the browser
@@ -43,7 +43,10 @@ module.exports = function(config) {
          * tests directory including subdirectories
          **/
         files: [
-            {pattern: 'tests/**/*.js', watched: false},
+            'node_modules/angular/angular.js',
+            'node_modules/angular-mocks/angular-mocks.js',
+            'dist/js/app.js',
+            {pattern: 'src/js/tests/**/*.js', watched: false},
         ],
 
         // list of files to exclude
@@ -59,7 +62,8 @@ module.exports = function(config) {
          */
         preprocessors: {
             'app.js': ['webpack', 'babel'],
-            'tests/**/*.spec.js': ['babel', 'webpack']
+            'tests/**/*.spec.js': ['babel', 'webpack'],
+            'src/app/**/*.html': ['ng-html2js']
         },
     })
 }
