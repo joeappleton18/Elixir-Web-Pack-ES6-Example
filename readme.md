@@ -8,7 +8,7 @@
 
 - Start the json test server `json-server --watch db.json --port 3004`
     - [For more info check out the gitHub repo](https://github.com/typicode/json-server)
-    - Api end point will be `http://localhost:3004
+    - Api end point will be `http://localhost:3004  
 `
 **The Tests**   
 
