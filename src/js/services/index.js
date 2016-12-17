@@ -16,9 +16,8 @@ Object.keys(services).forEach(key => {
         return;
     }
 
-    if (typeof item.default.fn === 'function' && item.default.fn) {
-        servicesModule.service(item.default.name, item.default.fn);
-    }
+    servicesModule.service(item.default.name, item.default.fn);
+
 });
 
 

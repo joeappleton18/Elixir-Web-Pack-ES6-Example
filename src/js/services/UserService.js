@@ -6,11 +6,12 @@ class UserService {
     }
 
     show() {
-       return this.$http.get(this.AppSettings.API_URL + 'users' + '/');
+        return this.$http.get(this.AppSettings.API_URL + 'users' + '/');
     }
 
 }
+
 export default {
     name: 'UserService',
-    fn: UserService
+    fn: ['$http', 'AppSettings', UserService]
 };

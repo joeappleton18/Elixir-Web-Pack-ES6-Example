@@ -10,6 +10,7 @@ class HomeController {
 
     getUsers() {
         this.userService.show().then((response) => {
+            console.log(response);
             this.users = response.data
         }, (errorResponse) => {
             console.log('error' + errorResponse);
