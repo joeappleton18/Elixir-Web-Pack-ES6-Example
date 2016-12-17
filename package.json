@@ -22,7 +22,7 @@
   "license": "ISC",
   "main": "index.html",
   "dependencies": {
-    "angular": "^1.6.0",
+    "angular": "^1.5.7",
     "angular-route": "^1.6.0",
     "angular-ui-router": "^0.3.2",
     "babel-preset-es2015": "^6.5.0",
@@ -30,9 +30,9 @@
     "bootstrap-sass": "^3.0.0"
   },
   "devDependencies": {
-    "angular-mocks": "^1.6.0",
+
+    "angular-mocks": "^1.5.7",
     "browserify-fs": "^1.0.0",
-    "elixir-jshint": "^1.2.3",
     "gulp": "^3.9.1",
     "gulp-util": "^3.0.7",
     "jasmine-core": "^2.5.2",

@@ -17,7 +17,7 @@ module.exports = function(config) {
 
         autoWatch: true, // enable / disable watching files & then run tests
 
-        browsers: ['Firefox'], //'PhantomJS', 'Firefox',
+        browsers: ['Chrome'], //'PhantomJS', 'Firefox',
 
         singleRun: true, // if true, Karma captures browsers, runs the tests and exits
 
@@ -30,23 +30,14 @@ module.exports = function(config) {
             stats: 'errors-only'
         },
 
-        /**
-         * base path that will be used to resolve all patterns (eg. files, exclude)
-         * This should be your JS Folder where all source javascript
-         * files are located.
-         */
-        //basePath: 'src/js',
-
-        /**
-         * list of files / patterns to load in the browser
-         * The pattern just says load all files within a
-         * tests directory including subdirectories
-         **/
         files: [
+
             'node_modules/angular/angular.js',
             'node_modules/angular-mocks/angular-mocks.js',
             'dist/js/app.js',
-            {pattern: 'src/js/tests/**/*.js', watched: false},
+            'src/js/tests/**/*.js',
+            'views/**/*.html',
+            'dist/js/app.js'
         ],
 
         // list of files to exclude
@@ -63,7 +54,11 @@ module.exports = function(config) {
         preprocessors: {
             'app.js': ['webpack', 'babel'],
             'tests/**/*.spec.js': ['babel', 'webpack'],
-            'src/app/**/*.html': ['ng-html2js']
+            'views/home/**/*.html': ['ng-html2js']
         },
+        ngHtml2JsPreprocessor: {
+            stripPrefix: 'views/',
+            moduleName: 'ngTemplates' //you can name this whatever you want
+        }
     })
 }

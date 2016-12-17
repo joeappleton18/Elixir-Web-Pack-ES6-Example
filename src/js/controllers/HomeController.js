@@ -1,15 +1,28 @@
 class HomeController {
 
-     constructor($http) {
+    constructor(scope,UserService) {
+        this.userService = UserService;
+        this.scope = scope;
         this.title = 'Elixir + Angular + Web pack + ECMAScript 6';
-        this.$http = $http;
-     }
+        this.scope.helloWorld = this.hello;
+        this.getUsers();
+    }
+
+    getUsers() {
+        this.userService.show().then((response) => {
+            this.users = response.data
+        }, (errorResponse) => {
+            console.log('error' + errorResponse);
+        });
+    }
+
+    hello() {
+        alert('hello world');
+    }
 
 }
 
-HomeController.$inject = ['$http'];
-
 export default {
-  name: 'HomeController',
-  fn: HomeController
+    name: 'HomeController',
+    fn: ['$scope','UserService', HomeController],
 };

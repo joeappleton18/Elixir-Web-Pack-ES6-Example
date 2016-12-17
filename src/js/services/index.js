@@ -17,10 +17,11 @@ Object.keys(services).forEach(key => {
     }
 
     if (typeof item.default.fn === 'function' && item.default.fn) {
-
         servicesModule.service(item.default.name, item.default.fn);
     }
 });
+
+
 
 export default  servicesModule;
 

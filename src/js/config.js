@@ -4,11 +4,11 @@ class Config {
   constructor($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/');
-        $stateProvider.state('Home', {
+        $stateProvider.state('home', {
           url: '/',
-          controller: 'HomeController as HomeController',
+          controller: 'HomeController as home',
           templateUrl: 'views/home/index.html',
-          title: 'Home'
+          title: 'home'
         });
   }
 
